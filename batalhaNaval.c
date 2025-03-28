@@ -21,15 +21,26 @@ int main() {
     int tabuleiro[10][10] = {0};
     int tamanhoNavio = 3;
 
-    // colocar navio horizontal
+    // Colocar navio horizontal
     for (int i = 0; i < tamanhoNavio; i++) {
         tabuleiro[2][4 + i] = 3;
     }
 
-    // colocar navio vertical
+    // Colocar navio vertical
     for (int i = 0; i < tamanhoNavio; i++) {
         tabuleiro[5 + i][7] = 3;
     }
+
+    // Colocar navio diagonal (crescente)
+    for (int i = 0; i < tamanhoNavio; i++) {
+        tabuleiro[1 + i][1 + i] = 3;
+    }
+
+    // Colocar navio diagonal (decrescente)
+    for (int i = 0; i < tamanhoNavio; i++) {
+        tabuleiro[8 - i][1 + i] = 3;
+    }
+
 
     imprimirTabuleiro(tabuleiro);
     
